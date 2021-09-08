@@ -1,0 +1,9 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/js/Login.js": "/js/Login.js",
+    "/js/Register.js": "/js/Register.js",
+    "/js/Book.js": "/js/Book.js",
+    "/js/AddBook.js": "/js/AddBook.js",
+    "/js/NotFound.js": "/js/NotFound.js",
+    "/css/app.css": "/css/app.css"
+}
