@@ -7,16 +7,17 @@ use Illuminate\Http\Request;
 use App\Http\Requests\CreateUserRequest;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use App\Service\UserService;
 
 class RegisterController extends ApiController
 {
-    public function store(CreateUserRequest $request)
+    public function store(CreateUserRequest $request, UserService $userService)
     {
-        User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
-        return $this->respondCreated('Successfully register user');
+        $user = $userService->create($request);
+
+        if($user){
+            return $this->respondCreated('Successfully register user');
+        }
+        return $this->respondInternalServerError();
     }
 }
