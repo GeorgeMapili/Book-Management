@@ -7344,7 +7344,7 @@ var render = function() {
     [
       _c("Header"),
       _vm._v(" "),
-      _c("div", { staticClass: "mt-3" }, [
+      _c("div", [
         _vm.authenticated
           ? _c("button", { on: { click: _vm.back } }, [_vm._v("Go Back")])
           : _vm._e(),

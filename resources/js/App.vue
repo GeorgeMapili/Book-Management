@@ -1,7 +1,7 @@
 <template>
     <div>
         <Header />
-                <div class="mt-3">
+                <div>
                     <button v-if="authenticated" @click="back">Go Back</button>
                     <button v-if="authenticated" @click="forward">Go Forward</button>
                 </div>
